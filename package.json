@@ -1,0 +1,50 @@
+{
+  "name": "Comics",
+  "version": "0.0.1",
+  "private": true,
+  "config": {
+    "assetsDirectories": [
+      "assets/generated/Resources/iphone/images",
+      "assets/generated/Resources/images"
+    ]
+  },
+  "jest": {
+    "preset": "jest-react-native",
+    "globals": {
+      "__DEV__": true
+    },
+    "preprocessorIgnorePatterns": [
+      "node_modules/(?!react-native|react-clone-referenced-element|rn-splash-screen)"
+    ]
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "re-install": "watchman watch-del-all && rm -rf node_modules/ && rm -fr $TMPDIR/react-* && npm cache clean && npm install",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start:clean": "watchman watch-del-all && rm -fr $TMPDIR/react-* && npm cache clean && npm start -- --reset-cache"
+  },
+  "dependencies": {
+    "moment": "^2.14.1",
+    "react": "15.3.2",
+    "react-addons-shallow-compare": "^15.1.0",
+    "react-native": "0.32.1",
+    "react-native-gifted-listview": "0.0.15",
+    "react-native-i18n": "0.1.1",
+    "react-native-navigation": "2.0.0-experimental.133",
+    "react-native-router-flux": "^3.30.3",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0",
+    "rn-splash-screen": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^15.0.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react-native": "^1.9.0",
+    "del": "^2.2.2",
+    "jest": "^15.1.1",
+    "jest-cli": "^15.1.1",
+    "jest-react-native": "^15.0.0",
+    "react-test-renderer": "^15.3.2"
+  }
+}
